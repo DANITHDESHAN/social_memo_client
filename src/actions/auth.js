@@ -1,14 +1,16 @@
 import * as api from "../api";
 import {AUTH} from '../constance/actionTypes';
 
-export const signin = (formData,history) => async (dispatch)=>{
+export const signin = (formData,router) => async (dispatch)=>{
+    console.log(formData);
     try {
         // log in the user
+        console.log(formData);
         const {data}=await api.signIn(formData);
 
         dispatch({type:AUTH,data});
 
-        history.push('/');
+        router.push('/');
     } catch (error) {
         console.log(error);
     }

@@ -26,7 +26,6 @@ export default makeStyles((theme) => ({
   },
   toolbar: {
     display: 'flex',
-   
     justifyContent: 'flex-end',
     width: '400px',
     [theme.breakpoints.down('sm')]: {
@@ -61,4 +60,3 @@ export default makeStyles((theme) => ({
     backgroundColor: deepPurple[500],
   },
 }));
-

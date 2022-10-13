@@ -43,9 +43,10 @@ function NavBar() {
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">
         <div className={classes.brandContainer}>
-        <Typography component={Link} to="/" className={classes.heading} variant="h2" align="center">
-          Memories
-        </Typography>
+        {/* <Typography component={Link} to="/" className={classes.heading} variant="h2" align="center">
+          StoreIT
+        </Typography> */}
+        <Link to='/' className={classes.brandContainer}>
         <img
           className={classes.image}
           src={memories}
@@ -53,6 +54,8 @@ function NavBar() {
           height="60"
         />
 
+        </Link>
+       
         <Toolbar className={classes.toolbar}>
             {user ? (
                 <div className={classes.profile}>
